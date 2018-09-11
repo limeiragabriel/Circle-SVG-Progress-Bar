@@ -1,0 +1,46 @@
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.progress-circle {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-progress {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  stroke: #eee;
+  stroke-width: 2.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 200ms ease-in-out;
+  animation: progress 1s ease-in-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 40 100;
+  }
+}
+
+.circular-progress.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #fff;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
