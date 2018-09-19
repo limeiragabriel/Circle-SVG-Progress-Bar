@@ -1,7 +1,8 @@
 var control = document.getElementById('control');
-var progressValue = document.querySelector('.circle');
+var progressValue = document.querySelector('.progress__value');
 
-var CIRCUMFERENCE = 100;
+var RADIUS = 56;
+var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 function progress(value) {
 	var progress = value / 100;
@@ -9,14 +10,11 @@ function progress(value) {
 	
 	console.log('progress:', value + '%', '|', 'offset:', dashoffset)
 	
-	progressValue.style.strokeDashoffset = (dashoffset);
-
-	//document.getElementById('cont').textContent = value + '%';
+	progressValue.style.strokeDashoffset = dashoffset;
 }
 
 control.addEventListener('input', function(event) {
 	progress(event.target.valueAsNumber);
-
 });
 
 progressValue.style.strokeDasharray = CIRCUMFERENCE;

@@ -1,46 +1,26 @@
-.flex-wrapper {
-  display: flex;
-  flex-flow: row nowrap;
+.container {
+	width: 500px;
+	height: 500px;
 }
 
-.progress-circle {
-  width: 33%;
-  justify-content: space-around ;
+.progress-meter,
+.progress-value {
+	fill: none;
 }
 
-.circular-progress {
-  display: block;
-  margin: 10px auto;
-  max-width: 80%;
-  max-height: 250px;
+.progress-meter {
+	stroke: #e6e6e6;
 }
 
-.circle-bg {
-  stroke: #eee;
-  stroke-width: 2.8;
-}
+.progress-value {
+	stroke: #f77a52;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 200ms ease-in-out;
+} 
 
-.circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 200ms ease-in-out;
-  animation: progress 1s ease-in-out forwards;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 40 100;
-  }
-}
-
-.circular-progress.blue .circle {
-  stroke: #3c9ee5;
-}
-
-.percentage {
-  fill: #fff;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
+.image{
+	background-image: url("https://picsum.photos/200/300/?random");
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
