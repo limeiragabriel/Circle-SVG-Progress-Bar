@@ -1,5 +1,5 @@
 var control = document.getElementById('control');
-var progressValue = document.querySelector('.progress__value');
+var progressValue = document.querySelector('.progress-value');
 
 var RADIUS = 56;
 var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
